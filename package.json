@@ -1,0 +1,64 @@
+{
+  "private": true,
+  "name": "jesse-hoffman",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch",
+    "lint:scripts": "eslint src",
+    "lint:styles": "stylelint src"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "standard",
+      "standard-preact"
+    ]
+  },
+  "eslintIgnore": [
+    "build/*"
+  ],
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-styled-components"
+    ],
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-styled-components"
+    ],
+    "syntax": "scss",
+    "rules": {
+      "indentation": 4,
+      "max-empty-lines": 2,
+      "at-rule-no-unknown": null
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.1.2",
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-config-synacor": "^2.0.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "if-env": "^1.0.0",
+    "preact-cli": "^2.0.1",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.2.1"
+  },
+  "dependencies": {
+    "babel-plugin-emotion": "^8.0.12",
+    "emotion": "^8.0.12",
+    "preact": "^8.2.6",
+    "preact-compat": "^3.17.0",
+    "preact-emotion": "^8.0.12",
+    "preact-router": "^2.5.7"
+  }
+}
