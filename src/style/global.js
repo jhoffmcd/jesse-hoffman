@@ -1,3 +1,5 @@
+import breakpoints from './breakpoints'
+
 export default`
   html, body {
     height: 100%;
@@ -18,6 +20,10 @@ export default`
 
   #app {
     height: 100%;
-    padding-top: 305px;
+    padding-top: 60px;
+
+    ${breakpoints.tablet} {
+      padding-top: 200px;
+    }
   }
 `

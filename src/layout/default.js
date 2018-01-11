@@ -1,10 +1,11 @@
 import { h, Component } from 'preact'
-import styled from 'preact-emotion'
+import styled, { css } from 'preact-emotion'
 import breakpoints from '../style/breakpoints'
+
+import Logo from '../components/logo'
 
 export default class DefaultLayout extends Component {
   render (props) {
-    console.log(breakpoints)
     const Grid = styled.div`
       margin: 0 auto;
       padding: 0 20px;
@@ -18,10 +19,14 @@ export default class DefaultLayout extends Component {
       }
     `
 
+    const aside = css`
+      text-align: center;
+    `
+
     return (
       <Grid>
-        <aside>
-          This is the aside.
+        <aside class={aside}>
+          <Logo />
         </aside>
         <section>
           This is the main content.
