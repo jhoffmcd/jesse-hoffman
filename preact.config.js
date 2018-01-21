@@ -12,4 +12,6 @@ export default (config, env, helpers) => {
       { from: 'robots.txt' }
     ])
   )
+
+  config.resolve.alias['@fortawesome/fontawesome-free-brands$'] = '@fortawesome/fontawesome-free-brands/shakable.es.js'
 }

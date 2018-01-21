@@ -5,6 +5,7 @@ import { flush, standard } from '../style/standard-scale'
 
 import Logo from '../components/logo'
 import ShortBio from '../components/short-bio'
+import Social from '../components/social'
 
 export default class DefaultLayout extends Component {
   render (props) {
@@ -44,6 +45,7 @@ export default class DefaultLayout extends Component {
         <aside class={aside}>
           <Logo />
           <ShortBio />
+          <Social />
         </aside>
         <section>
           This is the main content.
