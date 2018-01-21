@@ -2,7 +2,7 @@ const breakpointsRef = {
   xSmall: 480,
   phone: 640,
   tablet: 768,
-  desktop: 1200,
+  desktop: 1200
 }
 
 const breakpoints = {}

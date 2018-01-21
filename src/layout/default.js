@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
 import styled, { css } from 'preact-emotion'
 import breakpoints from '../style/breakpoints'
+import { flush } from '../style/spacing'
 
 import Logo from '../components/logo'
 
@@ -14,13 +15,21 @@ export default class DefaultLayout extends Component {
 
       ${breakpoints.tablet} {
         display: grid;
-        grid-template-columns: 280px 1fr;
+        grid-template-columns: 3fr 1fr 8fr;
         grid-gap: 20px;
+      }
+
+      > *:last-child {
+        grid-column-start: 3;
       }
     `
 
     const aside = css`
       text-align: center;
+
+      > *:last-child {
+        ${flush}
+      }
     `
 
     return (
