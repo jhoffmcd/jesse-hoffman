@@ -1,4 +1,5 @@
 import breakpoints from './breakpoints'
+import elements from './elements'
 
 export default`
   html, body {
@@ -7,7 +8,7 @@ export default`
     padding: 0;
     margin: 0;
     background: #fff;
-    font-family: 'Helvetica Neue', arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: ${28 / 20};
@@ -37,7 +38,5 @@ export default`
     }
   }
 
-  p {
-    margin: 0
-  }
+  ${elements}
 `
