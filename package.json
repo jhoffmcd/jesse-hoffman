@@ -57,6 +57,7 @@
   "dependencies": {
     "babel-plugin-emotion": "^8.0.12",
     "emotion": "^8.0.12",
+    "modularscale-js": "^3.0.1",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "preact-emotion": "^8.0.12",

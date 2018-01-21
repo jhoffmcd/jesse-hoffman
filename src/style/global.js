@@ -9,9 +9,19 @@ export default`
     background: #fff;
     font-family: 'Helvetica Neue', arial, sans-serif;
     font-weight: 400;
+    font-size: 16px;
+    line-height: ${28 / 20};
     color: #333;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    ${breakpoints.phoneSmall} {
+      font-size: 18px;
+    }
+
+    ${breakpoints.desktopSmall} {
+      font-size: 20px;
+    }
   }
 
   * {
@@ -25,5 +35,9 @@ export default`
     ${breakpoints.tablet} {
       padding-top: 200px;
     }
+  }
+
+  p {
+    margin: 0
   }
 `

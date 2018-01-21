@@ -1,20 +1,14 @@
 import { h, Component } from 'preact'
 import { css } from 'preact-emotion'
 import breakpoints from '../style/breakpoints'
-import { standard } from '../style/spacing'
-
-console.log(standard)
 
 export default class Logo extends Component {
   render () {
     const logo = css`
-      ${standard}
-      
       width: 70%;
       max-width: 260px;
-      margin-bottom: 30px;
 
-      ${breakpoints.xSmall} {
+      ${breakpoints.phoneSmall} {
         width: 100%;
       }
 

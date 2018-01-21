@@ -1,7 +1,8 @@
 const breakpointsRef = {
-  xSmall: 480,
+  phoneSmall: 480,
   phone: 640,
   tablet: 768,
+  desktopSmall: 960,
   desktop: 1200
 }
 

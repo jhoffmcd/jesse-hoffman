@@ -1,9 +1,10 @@
 import { h, Component } from 'preact'
 import styled, { css } from 'preact-emotion'
 import breakpoints from '../style/breakpoints'
-import { flush } from '../style/spacing'
+import { flush, standard } from '../style/standard-scale'
 
 import Logo from '../components/logo'
+import ShortBio from '../components/short-bio'
 
 export default class DefaultLayout extends Component {
   render (props) {
@@ -27,8 +28,14 @@ export default class DefaultLayout extends Component {
     const aside = css`
       text-align: center;
 
-      > *:last-child {
-        ${flush}
+      > * {
+        ${standard}
+
+        &:last-child {
+          ${breakpoints.tablet} {
+            ${flush}
+          }
+        }
       }
     `
 
@@ -36,6 +43,7 @@ export default class DefaultLayout extends Component {
       <Grid>
         <aside class={aside}>
           <Logo />
+          <ShortBio />
         </aside>
         <section>
           This is the main content.
