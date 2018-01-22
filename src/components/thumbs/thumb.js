@@ -11,7 +11,7 @@ const Thumb = ({ children, ...props }) => {
 
   return (
     <a href='#' class={inheritedStyles}>
-      <img src='http://via.placeholder.com/400x300/0017bf/ffffff?text=4:3' class={thumb} />
+      <img src='https://via.placeholder.com/400x300/0017bf/ffffff?text=4:3' class={thumb} />
     </a>
   )
 }
