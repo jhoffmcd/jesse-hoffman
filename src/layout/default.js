@@ -48,7 +48,6 @@ export default class DefaultLayout extends Component {
           <Social />
         </aside>
         <section>
-          This is the main content.
           { props.children }
         </section>
       </Grid>
