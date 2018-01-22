@@ -1,4 +1,5 @@
 export default {
+  grey: '#333333',
   blue: '#0017bf',
   lightBlue: '#0072d4',
   teal: '#00ffbb',
