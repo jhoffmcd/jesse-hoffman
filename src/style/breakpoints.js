@@ -3,7 +3,8 @@ const breakpointsRef = {
   phone: 640,
   tablet: 768,
   desktopSmall: 960,
-  desktop: 1200
+  desktop: 1200,
+  layoutSwitch: 1320
 }
 
 const breakpoints = {}

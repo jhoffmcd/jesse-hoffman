@@ -17,12 +17,18 @@ export default class DefaultLayout extends Component {
 
       ${breakpoints.tablet} {
         display: grid;
-        grid-template-columns: 3fr 1fr 8fr;
+        grid-template-columns: 4fr 8fr;
         grid-gap: 20px;
       }
 
+      ${breakpoints.layoutSwitch} {
+        grid-template-columns: 3fr 1fr 8fr;
+      }
+
       > *:last-child {
-        grid-column-start: 3;
+        ${breakpoints.layoutSwitch} {
+          grid-column-start: 3;
+        }
       }
     `
 
