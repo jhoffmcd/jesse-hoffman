@@ -16,9 +16,11 @@ const Thumb = ({ children, ...props }) => {
       }
   `
 
+  console.log(props)
+
   return (
     <a href='#' class={link}>
-      <img src='https://via.placeholder.com/400x300/0017bf/ffffff?text=4:3' class={thumb} />
+      <img src={`assets/thumbs/${props.assets.thumb}`} class={thumb} />
     </a>
   )
 }

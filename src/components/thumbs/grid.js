@@ -1,15 +1,14 @@
 import { h, Component } from 'preact'
 import styled from 'preact-emotion'
 import breakpoints from '../../style/breakpoints'
+import config from '../../config'
 
 import Thumb from './thumb'
 
-const thumbsData = [1, 2, 3, 4]
-
 export default class ThumbGrid extends Component {
   getThumbs () {
-    return thumbsData.map((thumb, i) => {
-      return <Thumb />
+    return config.projects.map(project => {
+      return <Thumb {...project} />
     })
   }
   render () {

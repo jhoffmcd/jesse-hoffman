@@ -34,6 +34,10 @@ export default`
     padding-top: 60px;
 
     ${breakpoints.tablet} {
+      padding-top: 100px;
+    }
+
+    ${breakpoints.desktop} {
       padding-top: 200px;
     }
   }
