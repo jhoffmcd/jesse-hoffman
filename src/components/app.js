@@ -3,6 +3,7 @@ import { Router } from 'preact-router'
 // import styled, { css } from 'preact-emotion'
 
 import Home from '../routes/home'
+import Detail from '../routes/detail'
 // import Profile from '../routes/profile'
 // import Home from 'async!../routes/home'
 // import Profile from 'async!../routes/profile'
@@ -21,8 +22,7 @@ export default class App extends Component {
       <div id='app'>
         <Router>
           <Home path='/' />
-          {/* <Profile path='/profile/' user='me' /> */}
-          {/* <Profile path='/profile/:user' /> */}
+          <Detail path='/projects/:project-name?' />
         </Router>
       </div>
     )

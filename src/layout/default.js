@@ -26,6 +26,8 @@ export default class DefaultLayout extends Component {
       }
 
       > *:last-child {
+        margin-bottom: 20px;
+
         ${breakpoints.layoutSwitch} {
           grid-column-start: 3;
         }
