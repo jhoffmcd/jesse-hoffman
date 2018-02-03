@@ -12,4 +12,17 @@ export default (config, env, helpers) => {
       { from: 'robots.txt' }
     ])
   )
+
+  // Add mdx support for markdown.
+  config.module.loaders.push(
+    { test: /\.mdx?$/,
+      use: [
+        'babel-loader',
+        'mdx-loader'
+      ]
+    }
+  )
+
+  // Add resolve support for mdx extension.
+  config.resolve.extensions.push('.mdx')
 }

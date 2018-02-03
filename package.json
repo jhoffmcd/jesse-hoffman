@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.1.2",
+    "babel-loader": "^7.1.2",
     "copy-webpack-plugin": "^4.3.1",
     "eslint": "^4.14.0",
     "eslint-config-standard": "^11.0.0-beta.0",
@@ -47,7 +48,10 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
+    "file-loader": "^1.1.6",
     "if-env": "^1.0.0",
+    "mdx-loader": "^1.0.0-beta.3",
+    "mdxc": "^1.0.0",
     "preact-cli": "^2.0.1",
     "stylelint": "^8.4.0",
     "stylelint-config-standard": "^18.0.0",
