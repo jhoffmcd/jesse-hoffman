@@ -8,6 +8,8 @@ import { config, standard, flush } from '../../style/standard-scale'
 
 const Thumb = ({ children, ...props }) => {
   const link = css`
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
   `
@@ -15,40 +17,50 @@ const Thumb = ({ children, ...props }) => {
   const thumb = css`
     display: block;
     margin: 0 auto;
-    ${standard}
     max-width: 100%;
-
-    ${breakpoints.phoneSmall} {
-      ${flush}
-    }
+    flex: 0 0 auto;
   `
 
   const thumbOverlay = css`
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     font-size: ${ms(0, config)}rem;
+    padding: ${ms(-2, config)}rem ${ms(-1, config)}rem;
+    ${standard}
     display: flex;
     align-items: center;
-    padding: ${ms(-2, config)}rem ${ms(-1, config)}rem;
     color: #fff;
-    opacity: 0;
     background: ${colors.lightGrey};
-    transition: ${timings.default};
 
-    .${link}:hover & {
-      opacity: 1;
-      transform: translateY(-100%);
+    ${breakpoints.phoneSmall} {
+      ${flush}
+      flex: 1 0 auto;
+    }
+
+    ${breakpoints.desktop} {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      transition: ${timings.default};
+
+      .${link}:hover & {
+        opacity: 1;
+        transform: translateY(-100%);
+      }
     }
   `
 
   const thumbIcon = css`
     fill: #fff;
-    width: 24px;
-    height: 27px;
+    width: 18px;
+    height: 20px;
+
+    ${breakpoints.phoneSmall} {
+      width: 24px;
+      height: 27px;
+    }
   `
 
   const thumbTitle = css`
