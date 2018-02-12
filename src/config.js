@@ -1,8 +1,10 @@
 export default {
   projects: [
     {
-      title: 'StarCraft II',
+      title: 'StarCraft II Game Site',
+      description: 'Test',
       client: 'Blizzard',
+      route: 'blizzard-starcraft-2',
       roles: ['Technical Lead', 'Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -14,7 +16,9 @@ export default {
     },
     {
       title: 'Overwatch World Cup',
+      description: '',
       client: 'Blizzard',
+      route: 'blizzard-overwatch-world-cup',
       roles: ['Technical Lead', 'Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -25,8 +29,10 @@ export default {
       external: 'https://worldcup.playoverwatch.com/en-us/'
     },
     {
-      title: 'Heroes 2.0',
+      title: 'Heroes 2.0 Game Site',
+      description: '',
       client: 'Blizzard',
+      route: 'blizzard-heroes-of-the-storm',
       roles: ['Technical Lead', 'Front End', 'Back End'],
       tech: ['html', 'css', 'js', 'java'],
       assets: {
@@ -38,7 +44,9 @@ export default {
     },
     {
       title: 'Heroes of the Dorm',
+      description: '',
       client: 'Blizzard',
+      route: 'blizzard-heroes-of-the-dorm',
       roles: ['Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -50,7 +58,9 @@ export default {
     },
     {
       title: 'Destiny 2 Comic Experience',
+      description: '',
       client: 'Bungie',
+      route: 'bungie-destiny-2-comic-reader',
       roles: ['Technical Lead', 'Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -62,7 +72,9 @@ export default {
     },
     {
       title: 'Nexus Siege',
+      description: '',
       client: 'Riot Games',
+      route: 'riot-games-nexus-siege',
       roles: ['Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -74,7 +86,9 @@ export default {
     },
     {
       title: 'Heroes Defy',
+      description: '',
       client: 'Blizzard',
+      route: 'blizzard-heroes-defy',
       roles: ['Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -86,7 +100,9 @@ export default {
     },
     {
       title: 'Overwatch Comic Experience',
+      description: '',
       client: 'Blizzard',
+      route: 'blizzard-overwatch-comic-reader',
       roles: ['Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -98,7 +114,9 @@ export default {
     },
     {
       title: 'WoW Comic Experience',
+      description: '',
       client: 'Blizzard',
+      route: 'blizzer-wow-comic-reader',
       roles: ['Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -109,8 +127,10 @@ export default {
       external: 'https://comic.worldofwarcraft.com/'
     },
     {
-      title: 'War Dragons',
+      title: 'War Dragons Game Site',
+      description: '',
       client: 'PocketGems',
+      route: 'pocketgems-wardragons',
       roles: ['Front End'],
       tech: ['html', 'css', 'js'],
       assets: {
@@ -122,7 +142,9 @@ export default {
     },
     {
       title: 'Riot Games Engineering',
+      description: '',
       client: 'Riot Games',
+      route: 'riot-games-engineering',
       roles: ['Front End', 'Back End'],
       tech: ['html', 'css', 'js', 'php'],
       assets: {

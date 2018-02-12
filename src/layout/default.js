@@ -1,7 +1,8 @@
 import { h, Component } from 'preact'
 import styled, { css } from 'preact-emotion'
 import breakpoints from '../style/breakpoints'
-import { flush, standard } from '../style/standard-scale'
+import { flush, standard, config } from '../style/standard-scale'
+import ms from 'modularscale-js'
 
 import Logo from '../components/logo'
 import ShortBio from '../components/short-bio'
@@ -36,6 +37,14 @@ export default class DefaultLayout extends Component {
 
     const aside = css`
       text-align: center;
+
+      ${breakpoints.tablet} {
+        padding: 0 ${ms(2, config)}rem;
+      }
+
+      ${breakpoints.layoutSwitch} {
+        padding: 0;
+      }
 
       > * {
         ${standard}
