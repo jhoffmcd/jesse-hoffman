@@ -2,7 +2,7 @@ export default {
   projects: [
     {
       title: 'StarCraft II Game Site',
-      description: 'Test',
+      description: 'Mordern redesign and relaunch of the StarCraft II Game Site following "Free to Play" update.',
       client: 'Blizzard',
       route: 'blizzard-starcraft-2',
       roles: ['Technical Lead', 'Front End'],
@@ -16,7 +16,7 @@ export default {
     },
     {
       title: 'Overwatch World Cup',
-      description: '',
+      description: 'Overwatch World Cup esports event hub.',
       client: 'Blizzard',
       route: 'blizzard-overwatch-world-cup',
       roles: ['Technical Lead', 'Front End'],
@@ -30,7 +30,7 @@ export default {
     },
     {
       title: 'Heroes 2.0 Game Site',
-      description: '',
+      description: 'Mordern redesign and relaunch of the Heroes of the Storm Game Site coinciding with a big in game update.',
       client: 'Blizzard',
       route: 'blizzard-heroes-of-the-storm',
       roles: ['Technical Lead', 'Front End', 'Back End'],
@@ -44,7 +44,7 @@ export default {
     },
     {
       title: 'Heroes of the Dorm',
-      description: '',
+      description: 'Main hub for Heroes of the Dorm collegiate level esports competitions. Also houses many promotions and contests for fans.',
       client: 'Blizzard',
       route: 'blizzard-heroes-of-the-dorm',
       roles: ['Front End'],
@@ -58,7 +58,7 @@ export default {
     },
     {
       title: 'Destiny 2 Comic Experience',
-      description: '',
+      description: 'A client side comic reader application that houses a comic experience with multiple issue support.',
       client: 'Bungie',
       route: 'bungie-destiny-2-comic-reader',
       roles: ['Technical Lead', 'Front End'],
@@ -72,7 +72,7 @@ export default {
     },
     {
       title: 'Nexus Siege',
-      description: '',
+      description: 'Promotional site for a new League of Legends game mode.',
       client: 'Riot Games',
       route: 'riot-games-nexus-siege',
       roles: ['Front End'],
@@ -86,7 +86,7 @@ export default {
     },
     {
       title: 'Heroes Defy',
-      description: '',
+      description: 'Promotional site for an game update to Heroes of the Storm.',
       client: 'Blizzard',
       route: 'blizzard-heroes-defy',
       roles: ['Front End'],
@@ -100,7 +100,7 @@ export default {
     },
     {
       title: 'Overwatch Comic Experience',
-      description: '',
+      description: 'A client side comic reader application that houses a comic experience with multiple issue and localization support.',
       client: 'Blizzard',
       route: 'blizzard-overwatch-comic-reader',
       roles: ['Front End'],
@@ -114,7 +114,7 @@ export default {
     },
     {
       title: 'WoW Comic Experience',
-      description: '',
+      description: 'A client side comic reader application that houses a comic experience with multiple issue and localization support. Also includes a modal version to be housed on other platforms.',
       client: 'Blizzard',
       route: 'blizzer-wow-comic-reader',
       roles: ['Front End'],
@@ -128,7 +128,7 @@ export default {
     },
     {
       title: 'War Dragons Game Site',
-      description: '',
+      description: 'Main Game Site for the mobile game War Dragons.',
       client: 'PocketGems',
       route: 'pocketgems-wardragons',
       roles: ['Front End'],
@@ -142,7 +142,7 @@ export default {
     },
     {
       title: 'Riot Games Engineering',
-      description: '',
+      description: 'A technical blog site for Riot Games engineering team.',
       client: 'Riot Games',
       route: 'riot-games-engineering',
       roles: ['Front End', 'Back End'],

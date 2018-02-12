@@ -6,8 +6,9 @@ import find from 'lodash/find'
 import DefaultLayout from '../../layout/default'
 import editorial from '../../style/editorial'
 import config from '../../config'
-import { config as scaleConfig } from '../../style/standard-scale'
+import { config as scaleConfig, flush } from '../../style/standard-scale'
 import breakpoints from '../../style/breakpoints'
+import colors from '../../style/colors';
 
 export default class ProjectDetail extends Component {
   constructor (props) {
@@ -36,6 +37,7 @@ export default class ProjectDetail extends Component {
     const detailHeader = css`
       display: flex;
       flex-direction: column;
+      margin-bottom: ${ms(0, scaleConfig)}rem;
 
       ${breakpoints.phoneSmall} {
         flex-direction: row;
@@ -48,7 +50,7 @@ export default class ProjectDetail extends Component {
     `
 
     const detailHeading = css`
-      margin-bottom: ${ms(-3, scaleConfig)}rem;
+      ${flush}
     `
 
     const detailExternalLink = css`
@@ -56,6 +58,11 @@ export default class ProjectDetail extends Component {
       align-items: center;
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
+      margin-top: ${ms(-3, scaleConfig)}rem;
+
+      ${breakpoints.phoneSmall} {
+        margin-top: ${ms(-6, scaleConfig)}rem;
+      }
 
       > * {
         flex: 0 0 auto;
@@ -77,27 +84,45 @@ export default class ProjectDetail extends Component {
       }
     `
 
-    // const taxonomy = css`
-    //   display: flex;
-    // `
+    const taxonomy = css`
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+    `
 
-    // const taxonomyTitle = css`
-    //   font-size: ${ms(0, scaleConfig)}rem;
-    // `
+    const taxonomyTitle = css`
+      font-size: ${ms(-0.5, scaleConfig)}rem;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      padding: ${ms(-6, scaleConfig)}rem 0 ${ms(-5, scaleConfig)}rem;
+      background: linear-gradient(125deg, ${colors.blue}, ${colors.lightBlue}, ${colors.teal});
+      color: #fff;
+      text-align: center;
+    `
 
-    // const taxonomyList = css`
-    //   list-style: none;
+    const taxonomyList = css`
+      list-style: none;
+      padding: ${ms(-2, scaleConfig)}rem 0 ${ms(-1, scaleConfig)}rem;
+      margin: 0;
+      text-align: center;
 
-    //   > li {
-    //     display: inline-block;
-    //     padding: 0 ${ms(-2, scaleConfig)}rem;
+      > li {
+        position: relative;
+        font-size: ${ms(-0.5, scaleConfig)}rem;
+        display: inline-block;
+        padding: ${ms(-2, scaleConfig)}rem ${ms(-1, scaleConfig)}rem;
 
-    //     &::after {
-    //       position: absolute;
-    //       content: '//';
-    //     }
-    //   }
-    // `
+        &:not(:last-child) {
+          &::after {
+            position: absolute;
+            content: '//';
+            top: 50%;
+            right: -${ms(-4, scaleConfig)}rem;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    `
 
     return (
       <DefaultLayout>
@@ -117,7 +142,8 @@ export default class ProjectDetail extends Component {
               </a>
             </div>
           </header>
-          {/* <div class={taxonomy}>
+          <p>{this.project.description}</p>
+          <div class={taxonomy}>
             <div class={taxonomyTitle}>Roles</div>
             <ul class={taxonomyList}>
               {this.getRoles()}
@@ -129,7 +155,6 @@ export default class ProjectDetail extends Component {
               {this.getTech()}
             </ul>
           </div>
-          <p>{this.project.description}</p> */}
         </div>
       </DefaultLayout>
     )
