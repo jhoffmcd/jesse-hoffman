@@ -34,6 +34,14 @@ export default class DefaultLayout extends Component {
       }
     `
 
+    const Section = styled.section`
+      margin-bottom: ${ms(2, config)}rem;
+
+      ${breakpoints.tablet} {
+        ${flush}
+      }
+    `
+
     const aside = css`
       text-align: center;
 
@@ -61,7 +69,7 @@ export default class DefaultLayout extends Component {
       font-size: ${ms(-0.5, config)}rem;
       padding: ${ms(4, config)}rem ${ms(-3, config)}rem;
       text-align: center;
-      border-top: 1px solid ${colors.lighterGrey};
+      border-top: 1px solid ${colors.lightestGrey};
 
       ${breakpoints.tablet} {
         font-size: ${ms(-1, config)}rem;
@@ -77,9 +85,9 @@ export default class DefaultLayout extends Component {
           <ShortBio />
           <Social />
         </aside>
-        <section>
+        <Section>
           { props.children }
-        </section>
+        </Section>
         <Footer>
           &copy; {new Date().getFullYear()}, Jesse Hoffman. <br />
           Built with <a href='https://github.com/developit/preact-cli' target='_blank' rel='noopener'>Preact CLI</a> and <a href='https://github.com/emotion-js/emotion' target='_blank' rel='noopener'>Emotion CSS-in-JS</a>.

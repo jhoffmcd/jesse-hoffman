@@ -17,8 +17,13 @@ const Thumb = ({ children, ...props }) => {
   const thumb = css`
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
     flex: 0 0 auto;
+
+    ${breakpoints.phoneSmall} {
+      width: auto;
+      max-width: 100%;
+    }
   `
 
   const thumbOverlay = css`

@@ -38,7 +38,7 @@ export default`
     }
 
     ${breakpoints.desktop} {
-      padding-top: 200px;
+      padding-top: 10vw;
     }
   }
 
