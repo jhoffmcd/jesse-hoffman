@@ -33,6 +33,10 @@ const Thumb = ({ children, ...props }) => {
     color: #fff;
     background: ${colors.lightGrey};
 
+    .${link}:last-child & {
+      ${flush}
+    }
+
     ${breakpoints.phoneSmall} {
       ${flush}
       flex: 1 0 auto;
