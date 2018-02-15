@@ -8,7 +8,7 @@ import editorial from '../../style/editorial'
 import config from '../../config'
 import { config as scaleConfig, flush } from '../../style/standard-scale'
 import breakpoints from '../../style/breakpoints'
-import colors from '../../style/colors';
+import colors from '../../style/colors'
 
 export default class ProjectDetail extends Component {
   constructor (props) {
@@ -124,6 +124,34 @@ export default class ProjectDetail extends Component {
       }
     `
 
+    const footer = css`
+      text-align: center;
+      font-size: ${ms(-0.5, scaleConfig)}rem;
+      padding: ${ms(-2, scaleConfig)}rem ${ms(-1, scaleConfig)}rem;
+
+      ${breakpoints.tablet} {
+        text-align: left;
+      }
+    `
+
+    const backIcon = css`
+      fill: currentColor;
+      margin-right: ${ms(-4, scaleConfig)}rem;
+      width: 15px;
+      height: 17px;
+
+      ${breakpoints.phoneSmall} {
+        width: 16px;
+        height: 18px;
+      }
+    `
+
+    const backLink = css`
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+    `
+
     return (
       <DefaultLayout>
         <div class={css(editorial)}>
@@ -155,6 +183,16 @@ export default class ProjectDetail extends Component {
               {this.getTech()}
             </ul>
           </div>
+          <footer class={footer}>
+            <a href='/' class={backLink}>
+              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' class={backIcon}>
+                <path d='M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z' />
+              </svg>
+              <span>
+                Back
+              </span>
+            </a>
+          </footer>
         </div>
       </DefaultLayout>
     )
