@@ -30,7 +30,7 @@ export default {
     },
     {
       title: 'Heroes 2.0 Game Site',
-      description: 'Mordern redesign and relaunch of the Heroes of the Storm Game Site coinciding with a big in game update.',
+      description: 'Modern redesign and relaunch of the Heroes of the Storm Game Site coinciding with a big in game update.',
       client: 'Blizzard',
       route: 'blizzard-heroes-of-the-storm',
       roles: ['Technical Lead', 'Front End', 'Back End'],
