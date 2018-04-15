@@ -12,3 +12,5 @@ This website shows some of things things I've been working on lately. It also se
 - [Stylelint](https://stylelint.io/)
 
 I'm a big fan of the idea of minimalism in the development, so I tend to favor ultra-lightweight libs.
+
+Test commit.
