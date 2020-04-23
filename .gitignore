@@ -1,18 +1,6 @@
-# Node
-node_modules
-
-# Build
-build
-
-# Editors
-.vscode
-
-# Env vars
-.env
-
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.DS_Store
+/node_modules/
+/src/node_modules/@sapper/
+yarn-error.log
+/cypress/screenshots/
+/__sapper__/

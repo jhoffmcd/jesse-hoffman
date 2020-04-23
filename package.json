@@ -1,70 +1,36 @@
 {
-  "private": true,
-  "name": "jesse-hoffman",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "jesse-hoffman-web",
+  "description": "A presonal site, maybe it has some past work, maybe a blog? I don't know yet.",
+  "version": "0.0.1",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build --template=src/template.html --no-prerender",
-    "serve": "preact build --template=src/template.html && preact serve",
-    "dev": "preact watch --template=src/template.html",
-    "lint:scripts": "eslint src",
-    "lint:styles": "stylelint src"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "standard",
-      "standard-preact"
-    ]
-  },
-  "eslintIgnore": [
-    "build/*"
-  ],
-  "stylelint": {
-    "processors": [
-      "stylelint-processor-styled-components"
-    ],
-    "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-styled-components"
-    ],
-    "syntax": "scss",
-    "rules": {
-      "indentation": 4,
-      "max-empty-lines": 2,
-      "at-rule-no-unknown": null
-    }
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.1.2",
-    "babel-loader": "^7.1.2",
-    "copy-webpack-plugin": "^4.3.1",
-    "eslint": "^4.14.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-config-standard-preact": "^1.1.6",
-    "eslint-config-synacor": "^2.0.2",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "file-loader": "^1.1.6",
-    "if-env": "^1.0.0",
-    "mdx-loader": "^1.0.0-beta.3",
-    "mdxc": "^1.0.0",
-    "preact-cli": "^2.0.1",
-    "stylelint": "^8.4.0",
-    "stylelint-config-standard": "^18.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.2.1"
+    "dev": "sapper dev",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "babel-plugin-emotion": "^8.0.12",
-    "emotion": "^8.0.12",
-    "modularscale-js": "^3.0.1",
-    "preact": "^8.2.6",
-    "preact-compat": "^3.17.0",
-    "preact-emotion": "^8.0.12",
-    "preact-router": "^2.5.7"
+    "compression": "^1.7.1",
+    "polka": "next",
+    "sirv": "^0.4.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sapper": "^0.27.0",
+    "svelte": "^3.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@rollup/plugin-replace": "^2.2.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-babel": "^4.0.2",
+    "rollup-plugin-svelte": "^5.0.1",
+    "rollup-plugin-terser": "^5.3.0"
   }
 }

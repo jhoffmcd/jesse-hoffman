@@ -1,35 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title><%= htmlWebpackPlugin.options.title %></title>
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>manifest.json">
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+	<meta name='theme-color' content='#333333'>
 
-		<% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
-			<meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">
-    <% } %>
+	%sapper.base%
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:500" rel="stylesheet">
+	<link rel='stylesheet' href='global.css'>
+	<link rel='manifest' href='manifest.json' crossorigin='use-credentials'>
+	<link rel='icon' type='image/png' href='favicon.png'>
 
-		<% for (var chunk of webpack.chunks) { %>
-		 <% if (chunk.names.length === 1 && chunk.names[0] === 'polyfills') continue; %>
-			<% for (var file of chunk.files) { %>
-				<% if (htmlWebpackPlugin.options.preload && file.match(/\.(js|css)$/)) { %>
-					<link rel="preload" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
-				<% } else if (file.match(/manifest\.json$/)) { %>
-					<link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath + file %>">
-				<% } %>
-			<% } %>
-		<% } %>
-	</head>
-	<body>
-		<%= htmlWebpackPlugin.options.ssr({
-			url: '/'
-    }) %>
-		<script defer src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
-		<script>window.fetch||document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
-	</body>
+	<!-- Sapper generates a <style> tag containing critical CSS
+	     for the current page. CSS for the rest of the app is
+	     lazily loaded when it precaches secondary pages -->
+	%sapper.styles%
+
+	<!-- This contains the contents of the <svelte:head> component, if
+	     the current page has one -->
+	%sapper.head%
+</head>
+<body>
+	<!-- The application will be rendered inside this element,
+	     because `src/client.js` references it -->
+	<div id='sapper'>%sapper.html%</div>
+
+	<!-- Sapper creates a <script> tag containing `src/client.js`
+	     and anything else it needs to hydrate the app and
+	     initialise the router -->
+	%sapper.scripts%
+</body>
 </html>
