@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload() {
     try {
-      const res = await this.fetch("api/cms/entries");
+      const res = await this.fetch("api/cms/entries/?contentType=blogPost");
       const { items: posts } = await res.json();
       return { posts };
     } catch (err) {
