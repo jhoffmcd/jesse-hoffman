@@ -4,6 +4,8 @@ import compression from "compression";
 import dotenv from "dotenv";
 import * as sapper from "@sapper/server";
 
+import "./styles/global.css";
+
 dotenv.config();
 
 const { PORT, NODE_ENV } = process.env;
