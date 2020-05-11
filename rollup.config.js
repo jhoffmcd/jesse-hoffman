@@ -4,30 +4,14 @@ import commonjs from "@rollup/plugin-commonjs";
 import svelte from "rollup-plugin-svelte";
 import getPreprocessor from "svelte-preprocess";
 import { terser } from "rollup-plugin-terser";
-import postcss from "rollup-plugin-postcss";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 
-const purgeCSS = require("@fullhuman/postcss-purgecss")({
-  content: ["./src/**/*.svelte", "./src/**/*.html"],
-  defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || [],
-});
-
-const postCSSPlugins = () => [
-  require("postcss-import")(),
-  require("tailwindcss")("./tailwind.js"),
-  ...(!dev ? [purgeCSS] : []),
-];
-
 const preprocess = getPreprocessor({
-  transformers: {
-    postcss: {
-      plugins: postCSSPlugins(),
-    },
-  },
+  postcss: true,
 });
 
 const onwarn = (warning, onwarn) =>
@@ -72,10 +56,6 @@ export default {
       replace({
         "process.browser": false,
         "process.env.NODE_ENV": JSON.stringify(mode),
-      }),
-      postcss({
-        plugins: postCSSPlugins(),
-        extract: "static/global.css",
       }),
       svelte({
         generate: "ssr",
