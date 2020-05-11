@@ -18,7 +18,7 @@
   <title>Jesse Hoffman</title>
 </svelte:head>
 
-<p>Lets see if we can get some blog posts</p>
+<!-- <p>Lets see if we can get some blog posts</p>
 
 {#if posts.length > 0}
   <ul>
@@ -26,4 +26,4 @@
       <li>{title}</li>
     {/each}
   </ul>
-{:else}Sorry, no posts for you{/if}
+{:else}Sorry, no posts for you{/if} -->
