@@ -1,5 +1,5 @@
 <style>
-  .hex {
+  div {
     height: 100%;
     width: 50px;
     background: red;
@@ -7,4 +7,4 @@
   }
 </style>
 
-<div class="hex" />
+<div />

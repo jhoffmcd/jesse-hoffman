@@ -4,31 +4,15 @@
 
 <style>
   nav {
-    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
-    font-weight: 300;
-    padding: 0 1em;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* clearfix */
-  ul::after {
-    content: "";
-    display: block;
-    clear: both;
+    @apply px-4;
   }
 
   li {
-    display: block;
-    float: left;
+    display: inline-block;
   }
 
   [aria-current] {
     position: relative;
-    display: inline-block;
   }
 
   [aria-current]::after {
@@ -36,15 +20,14 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    @apply bg-purple-light;
     display: block;
     bottom: -1px;
   }
 
   a {
-    text-decoration: none;
-    padding: 1em 0.5em;
     display: block;
+    @apply py-4 px-2;
   }
 </style>
 
