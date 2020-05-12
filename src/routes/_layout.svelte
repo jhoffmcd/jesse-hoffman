@@ -1,5 +1,6 @@
 <script>
   import Header from "../components/Header.svelte";
+  import Container from "../components/Container.svelte";
 
   export let segment;
 </script>
@@ -11,5 +12,7 @@
 <Header {segment} />
 
 <main>
-  <slot />
+  <Container>
+    <slot />
+  </Container>
 </main>

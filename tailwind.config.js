@@ -16,8 +16,8 @@ module.exports = {
         type: "linear",
         colors: [
           "45deg",
-          theme("colors.purple.dark"),
-          theme("colors.purple.medium"),
+          // theme("colors.purple.dark"),
+          // theme("colors.purple.medium"),
           theme("colors.purple.light"),
           theme("colors.magenta"),
           theme("colors.pink"),
