@@ -11,9 +11,23 @@ module.exports = {
       pink: "#dc94ba",
       gold: "#f2d067",
     },
+    gradients: (theme) => ({
+      retro: {
+        type: "linear",
+        colors: [
+          "45deg",
+          theme("colors.purple.dark"),
+          theme("colors.purple.medium"),
+          theme("colors.purple.light"),
+          theme("colors.magenta"),
+          theme("colors.pink"),
+          theme("colors.gold"),
+        ],
+      },
+    }),
   },
   variants: {},
-  plugins: [],
+  plugins: [require("tailwindcss-plugins/gradients")],
   corePlugins: {
     container: false,
   },
