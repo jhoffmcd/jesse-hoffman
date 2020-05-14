@@ -11,14 +11,44 @@
 </script>
 
 <script>
+  import Typography from "../components/Typography.svelte";
+
   export let projects;
 </script>
+
+<style>
+  header {
+    position: relative;
+  }
+
+  header::after {
+    content: "—";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Permanent Marker", cursive;
+    @apply text-magenta text-5xl;
+    line-height: 0;
+  }
+
+  @media md {
+    header::after {
+      @apply text-magenta text-6xl;
+    }
+  }
+</style>
 
 <svelte:head>
   <title>Jesse Hoffman</title>
 </svelte:head>
 
-<p>Lets see if we can get some blog projects</p>
+<section>
+  <header class="mb-8 md:mb-10 lg:mb-12 text-center">
+    <Typography tag="h1">Projects</Typography>
+  </header>
+</section>
 
 {#if projects.length > 0}
   <ul>

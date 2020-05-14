@@ -7,7 +7,7 @@
   See https://github.com/sveltejs/svelte/pull/3928 for progress
 -->
 {#if tag === 'h1'}
-  <h1 class="text-2xl">
+  <h1>
     <slot />
   </h1>
 {:else if tag === 'h2'}

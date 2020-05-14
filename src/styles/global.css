@@ -2,6 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Typography */
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -12,5 +14,28 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Permanent Marker", cursive;
+}
+
+h1,
+.h1 {
+  @apply text-3xl;
+}
+
+@screen md {
+  h1,
+  .h1 {
+    @apply text-4xl;
+  }
+}
+
+@screen lg {
+  h1,
+  .h1 {
+    @apply text-5xl;
+  }
+}
+
+.font-permanent-marker {
   font-family: "Permanent Marker", cursive;
 }
