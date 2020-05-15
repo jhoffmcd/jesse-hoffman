@@ -11,6 +11,10 @@ module.exports = {
       pink: "#dc94ba",
       gold: "#f2d067",
     },
+    zIndex: {
+      "0": 0,
+      "1": 1,
+    },
     gradients: (theme) => ({
       retro: {
         type: "linear",

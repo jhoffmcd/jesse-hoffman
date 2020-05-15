@@ -22,14 +22,14 @@ h1,
   @apply text-3xl;
 }
 
-@screen md {
+@media md {
   h1,
   .h1 {
     @apply text-4xl;
   }
 }
 
-@screen lg {
+@media lg {
   h1,
   .h1 {
     @apply text-5xl;
@@ -38,4 +38,27 @@ h1,
 
 .font-permanent-marker {
   font-family: "Permanent Marker", cursive;
+}
+
+/* Aspect Ratio */
+
+[style*="--aspect-ratio"] {
+  position: relative;
+}
+
+[style*="--aspect-ratio"] > img {
+  height: auto;
+}
+
+[style*="--aspect-ratio"]::before {
+  content: "";
+  display: block;
+  padding-bottom: calc(100% / (var(--aspect-ratio)));
+}
+
+[style*="--aspect-ratio"] > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
 }

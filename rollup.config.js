@@ -6,6 +6,7 @@ import getPreprocessor from "svelte-preprocess";
 import { terser } from "rollup-plugin-terser";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
+// import alias from "@rollup/plugin-alias";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -57,6 +58,9 @@ export default {
         "process.browser": false,
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
+      // alias({
+      //   entries: [{ find: "~", replacement: "./src" }],
+      // }),
       svelte({
         generate: "ssr",
         dev,
