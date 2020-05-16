@@ -24,11 +24,11 @@
   <title>Jesse Hoffman</title>
 </svelte:head>
 
-<!-- {#if posts.length > 0}
+{#if posts.length > 0}
   <ul>
     {#each posts as { fields: { title } }}
       <li>{title}</li>
     {/each}
   </ul>
-{:else}Sorry, no posts for you{/if} -->
+{:else}Sorry, no posts for you{/if}
 <div class="placeholder" />
