@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload() {
     try {
-      const res = await this.fetch("api/cms/entries/?contentType=blogPost");
+      const res = await this.fetch("api/cms/posts");
       const { items: posts } = await res.json();
       return { posts };
     } catch (err) {
@@ -11,6 +11,8 @@
 </script>
 
 <script>
+  import Container from "../components/Container.svelte";
+
   export let posts;
 </script>
 
@@ -24,11 +26,14 @@
   <title>Jesse Hoffman</title>
 </svelte:head>
 
-{#if posts.length > 0}
-  <ul>
-    {#each posts as { fields: { title } }}
-      <li>{title}</li>
-    {/each}
-  </ul>
-{:else}Sorry, no posts for you{/if}
-<div class="placeholder" />
+<Container>
+  {#if posts.length > 0}
+    <ul>
+      {#each posts as { fields: { title } }}
+        <li>{title}</li>
+      {/each}
+    </ul>
+  {:else}Sorry, no posts for you{/if}
+
+  <div class="placeholder" />
+</Container>

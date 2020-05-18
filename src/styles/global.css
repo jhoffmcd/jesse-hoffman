@@ -22,14 +22,14 @@ h1,
   @apply text-3xl;
 }
 
-@media md {
+@screen md {
   h1,
   .h1 {
     @apply text-4xl;
   }
 }
 
-@media lg {
+@screen lg {
   h1,
   .h1 {
     @apply text-5xl;

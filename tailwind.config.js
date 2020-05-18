@@ -14,14 +14,13 @@ module.exports = {
     zIndex: {
       "0": 0,
       "1": 1,
+      "2": 2,
     },
     gradients: (theme) => ({
       retro: {
         type: "linear",
         colors: [
           "45deg",
-          // theme("colors.purple.dark"),
-          // theme("colors.purple.medium"),
           theme("colors.purple.light"),
           theme("colors.magenta"),
           theme("colors.pink"),

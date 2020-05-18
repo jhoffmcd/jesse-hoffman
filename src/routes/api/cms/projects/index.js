@@ -8,7 +8,7 @@ export async function get(req, res) {
   const client = initClient();
 
   const entries = await client.getEntries({
-    content_type: contentType,
+    content_type: "project",
   });
 
   res.setHeader("Content-Type", "application/json");

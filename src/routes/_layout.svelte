@@ -1,6 +1,5 @@
 <script>
   import Header from "../components/Header.svelte";
-  import Container from "../components/Container.svelte";
   import Footer from "../components/Footer.svelte";
 
   export let segment;
@@ -13,9 +12,7 @@
 <Header {segment} />
 
 <main class="py-6 md:py-10">
-  <Container>
-    <slot />
-  </Container>
+  <slot />
 </main>
 
 <Footer />
