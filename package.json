@@ -2,6 +2,7 @@
   "name": "jesse-hoffman-web",
   "description": "A presonal site, maybe it has some past work, maybe a blog? I don't know yet.",
   "version": "0.0.1",
+  "license" : "MIT",
   "scripts": {
     "dev": "sapper dev",
     "dev:debug": "ndb npm run dev",
