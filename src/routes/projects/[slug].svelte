@@ -14,10 +14,13 @@
 <script>
   import Typography from "../../components/Typography.svelte";
   import Container from "../../components/Container.svelte";
+  import SectionHeader from "../../components/SectionHeader.svelte";
 
   export let featuredImage;
   export let title;
   export let description;
+  export let tech;
+  export let roles;
 
   export const imageSrc = featuredImage.fields.file.url;
   export const imageTitle = featuredImage.fields.title;
@@ -53,7 +56,38 @@
     </header>
   </Container>
 
-  <Container size="small">
-    <div>{description}</div>
+  <Container>
+    <div class="grid grid-cols-3 gap-12">
+      <aside class="col-span-1">
+        <SectionHeader>
+          Tech
+        </SectionHeader>
+        <ul>
+          {#if tech.length > 0}
+            {#each tech as tech}
+              <li>{tech}</li>
+            {/each}
+          {:else}No tech{/if}
+        </ul>
+        <SectionHeader>
+          Role
+        </SectionHeader>
+        <ul>
+          {#if roles.length > 0}
+            {#each roles as role}
+              <li>{role}</li>
+            {/each}
+          {:else}No tech{/if}
+        </ul>
+      </aside>
+      <div class="col-span-2">
+      <h2>Description</h2>
+      {description}
+      </div>
+    </div>
   </Container>
+
+  <!-- <Container size="small">
+    <div>{description}</div>
+  </Container> -->
 </section>

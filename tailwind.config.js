@@ -2,6 +2,8 @@ module.exports = {
   purge: [],
   theme: {
     colors: {
+      white: "#ffffff",
+      black: "#000000",
       purple: {
         dark: "#1a184b",
         medium: "#392758",
@@ -28,6 +30,11 @@ module.exports = {
         ],
       },
     }),
+    extend: {
+      inset: {
+        '1/2': '50%',
+      }
+    }
   },
   variants: {},
   plugins: [require("tailwindcss-plugins/gradients")],
