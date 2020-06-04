@@ -42,7 +42,7 @@
 <section>
   <Container>
     <header
-      class="relative mb-10 md:mb-12 lg:mb-16"
+      class="relative mb-10 md:mb-12 lg:mb-20"
       style="--aspect-ratio:{imageWidth}/{imageHeight}">
       <img
         class="absolute top-0 left-0 z-1 transform scale-95"
