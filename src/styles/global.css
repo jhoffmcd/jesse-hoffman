@@ -46,7 +46,7 @@ h1,
   position: relative;
 }
 
-[style*="--aspect-ratio"] > * {
+[style*="--aspect-ratio"] > img {
   height: auto;
 }
 

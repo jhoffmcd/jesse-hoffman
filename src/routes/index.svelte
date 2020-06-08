@@ -1,9 +1,15 @@
 <script context="module">
   export async function preload() {
     try {
-      const res = await this.fetch(`api/cms/pages/about`);
-      const { fields } = await res.json();
-      return { pageHeading: fields.pageHeading, body: fields.body };
+      const pageContentRes = await this.fetch(`api/cms/pages/about`);
+      const asset1Res = await this.fetch(`api/cms/assets/582f2mQfkBRq1uV79SargW`);
+      const asset2Res = await this.fetch(`api/cms/assets/6K3fkBCqJTvkwvHggrTMtD`);
+
+      const { fields: { pageHeading, body } } = await pageContentRes.json();
+      const { fields: { file: { url: asset1Url } } } = await asset1Res.json();
+      const { fields: { file: { url: asset2Url } } } = await asset2Res.json();
+
+      return { pageHeading, body, asset1Url, asset2Url };
     } catch (err) {
       console.error(err);
     }
@@ -17,30 +23,37 @@
 
   export let pageHeading;
   export let body;
+  export let asset1Url;
+  export let asset2Url;
 </script>
 
 <style>
-  .grid-visual {
-    display: grid;
-    grid-template-columns: repeat(12, [col-start] 1fr);
+  .visual-1 {
+    width: 50%;
+    height: 50%;
+    right: 50%;
+    bottom: 50%;
   }
 
-  .grid-visual-1 {
-    grid-column: col-start / span 6;
+  .visual-2 {
+    width: 30%;
+    height: 30%;
+    left: 50%;
+    bottom: 50%;
   }
 
-  .grid-visual-2 {
-    grid-column: col-start 7 / span 6;
+  .visual-3 {
+    width: 20%;
+    height: 20%;
+    right: 50%;
+    top: 50%;
   }
 
-  .boxes {
-    width: 100%;
-    height: 100%;
-    background: lightblue;
-  }
-
-  .box-1 {
-    background: red;
+  .visual-4 {
+    width: 40%;
+    height: 40%;
+    left: 50%;
+    top: 50%;
   }
 </style>
 
@@ -49,19 +62,24 @@
 </svelte:head>
 
 <Container>
-  <div class="grid-visual">
-    <div class="grid-visual-1">
+  <div class="grid grid-cols-12">
+    <div class="col-span-4">
       <h1>{pageHeading}</h1>
+      <div>{@html documentToHtmlString(body)}</div>
     </div>
-    <div class="grid-visual-2">
-      <!-- {@html documentToHtmlString(body)} -->
-      <div class="boxes">
-        <div class="box-1" style="--aspect-ratio: 4/3"></div>
-        <div class="box-2"></div>
-        <div class="box-3"></div>
-        <div class="box-4"></div>
+
+    <div class="col-span-7 col-start-6">
+
+      <!-- Visual Header -->
+      <div style="--aspect-ratio: 1/1; justify-self: end;">
+        <div class="w-full">
+          <div class="visual-1 absolute bg-cover bg-no-repeat bg-center" style={`background-image: url("${asset1Url}")`} />
+          <div class="visual-2 absolute bg-purple-medium" />
+          <div class="visual-3 absolute bg-magenta" />
+          <div class="visual-4 absolute bg-cover bg-no-repeat bg-center" style={`background-image: url("${asset2Url}")`} />
+        </div>
       </div>
+
     </div>
-    <!-- <div class="grid-visual-3"></div> -->
   </div>
 </Container>
