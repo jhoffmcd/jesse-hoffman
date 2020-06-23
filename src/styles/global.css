@@ -20,6 +20,7 @@ h6 {
 h1,
 .h1 {
   @apply text-3xl;
+  @apply mb-6;
 }
 
 @screen md {
@@ -33,6 +34,7 @@ h1,
   h1,
   .h1 {
     @apply text-5xl;
+    @apply mb-6;
   }
 }
 

@@ -2,14 +2,10 @@
   export async function preload() {
     try {
       const pageContentRes = await this.fetch(`api/cms/pages/about`);
-      const asset1Res = await this.fetch(`api/cms/assets/582f2mQfkBRq1uV79SargW`);
-      const asset2Res = await this.fetch(`api/cms/assets/6K3fkBCqJTvkwvHggrTMtD`);
 
-      const { fields: { pageHeading, body } } = await pageContentRes.json();
-      const { fields: { file: { url: asset1Url } } } = await asset1Res.json();
-      const { fields: { file: { url: asset2Url } } } = await asset2Res.json();
+      const { fields: { pageHeading, body, gallery } } = await pageContentRes.json();
 
-      return { pageHeading, body, asset1Url, asset2Url };
+      return { pageHeading, body, gallery };
     } catch (err) {
       console.error(err);
     }
@@ -23,8 +19,7 @@
 
   export let pageHeading;
   export let body;
-  export let asset1Url;
-  export let asset2Url;
+  export let gallery;
 </script>
 
 <style>
@@ -55,6 +50,10 @@
     left: 50%;
     top: 50%;
   }
+
+  .main-profile-image {
+    transform: scaleX(-1);
+  }
 </style>
 
 <svelte:head>
@@ -62,15 +61,20 @@
 </svelte:head>
 
 <Container>
-  <div class="grid grid-cols-12">
+  <div class="grid grid-cols-12 gap-20">
     <div class="col-span-4">
+      <img class="main-profile-image" alt="Jesse Hoffman Profile" src={asset1Url} />
+    </div>
+    <div class="col-span-8">
       <h1>{pageHeading}</h1>
       <div>{@html documentToHtmlString(body)}</div>
+    </div>
+    <!-- <div class="col-span-4">
+
     </div>
 
     <div class="col-span-7 col-start-6">
 
-      <!-- Visual Header -->
       <div style="--aspect-ratio: 1/1; justify-self: end;">
         <div class="w-full">
           <div class="visual-1 absolute bg-cover bg-no-repeat bg-center" style={`background-image: url("${asset1Url}")`} />
@@ -80,6 +84,6 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
   </div>
 </Container>
