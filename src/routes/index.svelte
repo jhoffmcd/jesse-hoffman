@@ -16,6 +16,7 @@
   import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
   import Container from "../components/Container.svelte";
+  import EditorialContent from "../components/EditorialContent.svelte";
 
   export let gallery;
   export let pageHeading;
@@ -72,7 +73,7 @@
     </div>
     <div class="col-span-2">
       <h1>{pageHeading}</h1>
-      <div>{@html documentToHtmlString(body)}</div>
+      <EditorialContent>{@html documentToHtmlString(body)}</EditorialContent>
     </div>
   </div>
 </Container>
