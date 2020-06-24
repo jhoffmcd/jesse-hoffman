@@ -20,7 +20,7 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    @apply bg-purple-light;
+    @apply bg-purple;
     display: block;
     bottom: -1px;
   }

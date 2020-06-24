@@ -5,11 +5,12 @@ module.exports = {
       white: "#ffffff",
       black: "#000000",
       body: "#CCC",
-      purple: {
-        dark: "#1a184b",
-        medium: "#392758",
-        light: "#b64bcd",
+      purple: "#b64bcd",
+      blue: {
+        dark: '#0017bf',
+        light: '#0072d4',
       },
+      teal: '#00ffbb',
       magenta: "#da5ad2",
       pink: "#dc94ba",
       gold: "#f2d067",
@@ -20,16 +21,25 @@ module.exports = {
       "2": 2,
     },
     gradients: (theme) => ({
-      retro: {
+      "retro": {
         type: "linear",
         colors: [
           "45deg",
-          theme("colors.purple.light"),
+          theme("colors.purple"),
           theme("colors.magenta"),
           theme("colors.pink"),
           theme("colors.gold"),
         ],
       },
+      "blue-green": {
+        type: "linear",
+        colors: [
+          "45deg",
+          theme("colors.blue.dark"),
+          theme("colors.blue.light"),
+          theme("colors.teal"),
+        ],
+      }
     }),
     extend: {
       inset: {

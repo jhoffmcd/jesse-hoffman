@@ -1,9 +1,9 @@
 <script context="module">
   export async function preload() {
     try {
-      const pageContentRes = await this.fetch(`api/cms/pages/about`);
+      const content = await this.fetch('api/cms/pages/about');
 
-      const { fields: { pageHeading, body, gallery } } = await pageContentRes.json();
+      const { fields: { pageHeading, body, gallery } } = await content.json();
 
       return { pageHeading, body, gallery };
     } catch (err) {
@@ -17,42 +17,39 @@
 
   import Container from "../components/Container.svelte";
 
+  export let gallery;
   export let pageHeading;
   export let body;
-  export let gallery;
+
+  export const profileAsset = gallery[0].fields.file;
 </script>
 
 <style>
-  .visual-1 {
-    width: 50%;
+  .corner-1 {
+    height: 25%;
+  }
+
+  .corner-2 {
     height: 50%;
-    right: 50%;
-    bottom: 50%;
   }
 
-  .visual-2 {
-    width: 30%;
-    height: 30%;
-    left: 50%;
-    bottom: 50%;
-  }
-
-  .visual-3 {
-    width: 20%;
+  .line-1, .line-2, .line-3 {
+    width: 4px;
     height: 20%;
-    right: 50%;
-    top: 50%;
+    right: 9%;
+    transform: skewX(-45deg);
   }
 
-  .visual-4 {
-    width: 40%;
-    height: 40%;
-    left: 50%;
-    top: 50%;
+  .line-1 {
+    bottom: 21%;
   }
 
-  .main-profile-image {
-    transform: scaleX(-1);
+  .line-2 {
+    bottom: calc(21% - 20px);
+  }
+
+  .line-3 {
+    bottom: calc(21% - 40px);
   }
 </style>
 
@@ -61,29 +58,21 @@
 </svelte:head>
 
 <Container>
-  <div class="grid grid-cols-12 gap-20">
-    <div class="col-span-4">
-      <img class="main-profile-image" alt="Jesse Hoffman Profile" src={asset1Url} />
+  <div class="sm:grid grid-cols-3 grid-rows-1 gap-20">
+    <div class="col-span-1">
+      <div class="relative max-w-xs mx-auto mb-8 sm:mb-0" style={`--aspect-ratio:${profileAsset.details.image.width / profileAsset.details.image.height}`}>
+        <img class="z-1 transform scale-95" alt="Jesse Hoffman Profile" src={profileAsset.url} />
+        <div class="corner-1 absolute top-0 left-0 w-1/4 bg-blue-green z-0" />
+        <div class="corner-2 absolute bottom-0 right-0 w-1/2 bg-retro z-0" />
+
+        <div class="line-1 absolute bg-blue-light z-2" />
+        <div class="line-2 absolute bg-gold z-2" />
+        <div class="line-3 absolute bg-magenta z-2" />
+      </div>
     </div>
-    <div class="col-span-8">
+    <div class="col-span-2">
       <h1>{pageHeading}</h1>
       <div>{@html documentToHtmlString(body)}</div>
     </div>
-    <!-- <div class="col-span-4">
-
-    </div>
-
-    <div class="col-span-7 col-start-6">
-
-      <div style="--aspect-ratio: 1/1; justify-self: end;">
-        <div class="w-full">
-          <div class="visual-1 absolute bg-cover bg-no-repeat bg-center" style={`background-image: url("${asset1Url}")`} />
-          <div class="visual-2 absolute bg-purple-medium" />
-          <div class="visual-3 absolute bg-magenta" />
-          <div class="visual-4 absolute bg-cover bg-no-repeat bg-center" style={`background-image: url("${asset2Url}")`} />
-        </div>
-      </div>
-
-    </div> -->
   </div>
 </Container>
