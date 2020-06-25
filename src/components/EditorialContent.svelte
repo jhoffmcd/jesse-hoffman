@@ -1,7 +1,13 @@
 <style>
   :global(.editorial-content) {
     line-height: 2;
-    @apply text-lg;
+    @apply text-base;
+  }
+
+  @screen md {
+    :global(.editorial-content) {
+      @apply text-lg;
+    }
   }
 
   :global(.editorial-content p) {

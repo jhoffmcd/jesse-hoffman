@@ -59,9 +59,9 @@
 </svelte:head>
 
 <Container>
-  <div class="sm:grid grid-cols-3 grid-rows-1 gap-20">
+  <div class="md:grid grid-cols-3 grid-rows-1 gap-20">
     <div class="col-span-1">
-      <div class="relative max-w-xs mx-auto mb-8 sm:mb-0" style={`--aspect-ratio:${profileAsset.details.image.width / profileAsset.details.image.height}`}>
+      <div class="relative max-w-xs mx-auto mb-8 md:mb-0" style={`--aspect-ratio:${profileAsset.details.image.width / profileAsset.details.image.height}`}>
         <img class="z-1 transform scale-95" alt="Jesse Hoffman Profile" src={profileAsset.url} />
         <div class="corner-1 absolute top-0 left-0 w-1/4 bg-blue-green z-0" />
         <div class="corner-2 absolute bottom-0 right-0 w-1/2 bg-retro z-0" />
