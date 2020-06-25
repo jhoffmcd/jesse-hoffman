@@ -1,20 +1,20 @@
 <style>
-  :global(.editorial-content) {
+  .editorial-content {
     line-height: 2;
     @apply text-base;
   }
 
   @screen md {
-    :global(.editorial-content) {
+    .editorial-content {
       @apply text-lg;
     }
   }
 
-  :global(.editorial-content p) {
+  .editorial-content :global(p) {
     @apply mb-4;
   }
 
-  :global(.editorial-content a) {
+  .editorial-content :global(a) {
     @apply text-magenta;
   }
 </style>
