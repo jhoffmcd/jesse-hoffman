@@ -11,7 +11,7 @@
 
 <Header {segment} />
 
-<main class="py-6 md:py-12">
+<main class="py-6 md:py-1 overflow-hidden">
   <slot />
 </main>
 

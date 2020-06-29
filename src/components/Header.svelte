@@ -1,8 +1,17 @@
 <script>
+  import { slide } from 'svelte/transition';
+
   import Nav from "../components/Nav.svelte";
   import Container from "../components/Container.svelte";
+  import Drawer from "../components/Drawer.svelte";
 
   export let segment;
+
+  let isDrawerActive = false;
+
+  function toggleDrawer(){
+    isDrawerActive = !isDrawerActive;
+  }
 </script>
 
 <header>
@@ -24,13 +33,15 @@
     </div>
 
     <!-- Mobile Menu Button > -->
-    <button class="block md:hidden p-2 w-12 -mr-2">
+    <button class="block md:hidden p-2 w-12 -mr-2" on:click={toggleDrawer}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <g fill="#241F20">
           <path d="M0 0h12v12H0zM18 0h12v12H18zM36 0h12v12H36zM0 18h12v12H0zM18 18h12v12H18zM36 18h12v12H36zM0 36h12v12H0zM18 36h12v12H18zM36 36h12v12H36z"/>
         </g>
       </svg>
     </button>
+
+    <Drawer isActive={isDrawerActive} on:closeDrawerRequest={toggleDrawer} />
 
   </Container>
 </header>
