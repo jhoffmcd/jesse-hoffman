@@ -29,7 +29,7 @@
 
     <!-- Desktop Navigation -->
     <div class="hidden md:block">
-      <Nav {segment} />`
+      <Nav {segment} />
     </div>
 
     <!-- Mobile Menu Button > -->
