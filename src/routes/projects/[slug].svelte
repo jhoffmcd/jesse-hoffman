@@ -15,12 +15,14 @@
   import Typography from "../../components/Typography.svelte";
   import Container from "../../components/Container.svelte";
   import SectionHeader from "../../components/SectionHeader.svelte";
+  import Button from "../../components/Button.svelte";
 
   export let featuredImage;
   export let title;
   export let description;
   export let tech;
   export let roles;
+  export let url;
 
   export const imageSrc = featuredImage.fields.file.url;
   export const imageTitle = featuredImage.fields.title;
@@ -37,12 +39,18 @@
   .corner {
     left: 1.25%;
   }
+
+  .arrow-right {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid green;
+  }
 </style>
 
 <section>
   <Container>
     <header
-      class="relative mb-10 md:mb-12 lg:mb-20"
+      class="relative mb-4 md:mb-12 lg:mb-20"
       style="--aspect-ratio:{imageWidth}/{imageHeight}">
       <img
         class="absolute top-0 left-0 z-1 transform scale-95"
@@ -50,15 +58,23 @@
         title={imageTitle}
         alt={imageDescription} />
       <div class="corner absolute top-0 w-1/4 h-32 bg-retro z-0" />
-      <div class="title absolute right-0 z-2 py-6 px-12 bg-gold text-right">
-        <Typography tag="h1">{title}</Typography>
+      <div class="title hidden md:block absolute right-0 z-2 py-6 px-12 bg-gold text-right">
+        <h1 class="mb-0">{title}</h1>
       </div>
     </header>
+
+    <div class="md:hidden text-left">
+      <h1>{title}</h1>
+    </div>
   </Container>
 
   <Container>
-    <div class="grid grid-cols-3 gap-12">
-      <aside class="col-span-1">
+    <Button {url} external={true}>Visit Project</Button>
+  </Container>
+
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-12">
+      <aside class="col-span-1 order-2">
         <SectionHeader>
           Tech
         </SectionHeader>
@@ -69,6 +85,7 @@
             {/each}
           {:else}No tech{/if}
         </ul>
+
         <SectionHeader>
           Role
         </SectionHeader>
@@ -79,11 +96,13 @@
             {/each}
           {:else}No tech{/if}
         </ul>
+
       </aside>
-      <div class="col-span-2">
-      <h2>Description</h2>
-      {description}
-      </div>
+
+      <article class="md:col-span-2 mb-12 order-1">
+        <h2>Description</h2>
+        {description}
+      </article>
     </div>
   </Container>
 
