@@ -5,7 +5,7 @@
 
   function closeDrawer() {
     if (mobileDrawerActive) {
-      mobileDrawerActive.update(active => false)
+      mobileDrawerActive.update(() => false);
     }
   }
 
@@ -28,7 +28,7 @@
     display: inline-block;
   }
 
-  nav.vertical li{
+  nav.vertical li {
     width: 100%;
   }
 
@@ -38,7 +38,7 @@
 
   [aria-current]::after {
     position: absolute;
-    content: "";
+    content: '';
     width: calc(100% - 1em);
     height: 2px;
     @apply bg-purple;
@@ -58,8 +58,7 @@
       <a
         aria-current={segment === undefined ? 'page' : undefined}
         href="./"
-        on:click={(evt) => handleClick("./", evt)}
-      >
+        on:click={(evt) => handleClick('./', evt)}>
         About
       </a>
     </li>
@@ -68,8 +67,7 @@
         rel="prefetch"
         aria-current={segment === 'projects' ? 'page' : undefined}
         href="projects/"
-        on:click={(evt) => handleClick("projects/", evt)}
-      >
+        on:click={(evt) => handleClick('projects/', evt)}>
         Projects
       </a>
     </li>
@@ -78,8 +76,7 @@
         rel="prefetch"
         aria-current={segment === 'blog' ? 'page' : undefined}
         href="blog/"
-        on:click={(evt) => handleClick("blog/", evt)}
-      >
+        on:click={(evt) => handleClick('blog/', evt)}>
         Writing
       </a>
     </li>

@@ -1,22 +1,22 @@
-import sirv from "sirv";
-import polka from "polka";
-import compression from "compression";
-import dotenv from "dotenv";
-import * as sapper from "@sapper/server";
+import sirv from 'sirv';
+import polka from 'polka';
+import compression from 'compression';
+import dotenv from 'dotenv';
+import * as sapper from '@sapper/server';
 
-import "./styles/global.css";
+import './styles/global.css';
 
 dotenv.config();
 
 const { PORT, NODE_ENV } = process.env;
-const dev = NODE_ENV === "development";
+const dev = NODE_ENV === 'development';
 
 polka()
   .use(
     compression({ threshold: 0 }),
-    sirv("static", { dev }),
+    sirv('static', { dev }),
     sapper.middleware()
   )
   .listen(PORT, (err) => {
-    if (err) console.log("error", err);
+    if (err) console.log('error', err);
   });

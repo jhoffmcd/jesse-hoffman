@@ -4,13 +4,13 @@
   }
 
   header::after {
-    content: "—";
+    content: '—';
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-family: "Permanent Marker", cursive;
+    font-family: 'Permanent Marker', cursive;
     @apply text-magenta text-5xl;
     line-height: 0;
   }

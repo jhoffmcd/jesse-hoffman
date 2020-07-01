@@ -12,10 +12,9 @@
 </script>
 
 <script>
-  import Typography from "../../components/Typography.svelte";
-  import Container from "../../components/Container.svelte";
-  import SectionHeader from "../../components/SectionHeader.svelte";
-  import Button from "../../components/Button.svelte";
+  import Container from '../../components/Container.svelte';
+  import SectionHeader from '../../components/SectionHeader.svelte';
+  import Button from '../../components/Button.svelte';
 
   export let featuredImage;
   export let title;
@@ -39,12 +38,6 @@
   .corner {
     left: 1.25%;
   }
-
-  .arrow-right {
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid green;
-  }
 </style>
 
 <section>
@@ -58,7 +51,9 @@
         title={imageTitle}
         alt={imageDescription} />
       <div class="corner absolute top-0 w-1/4 h-32 bg-retro z-0" />
-      <div class="title hidden md:block absolute right-0 z-2 py-6 px-12 bg-gold text-right">
+      <div
+        class="title hidden md:block absolute right-0 z-2 py-6 px-12 bg-gold
+        text-right">
         <h1 class="mb-0">{title}</h1>
       </div>
     </header>
@@ -75,9 +70,7 @@
   <Container>
     <div class="grid grid-cols-1 md:grid-cols-3 md:gap-12">
       <aside class="col-span-1 order-2">
-        <SectionHeader>
-          Tech
-        </SectionHeader>
+        <SectionHeader>Tech</SectionHeader>
         <ul>
           {#if tech.length > 0}
             {#each tech as tech}
@@ -86,9 +79,7 @@
           {:else}No tech{/if}
         </ul>
 
-        <SectionHeader>
-          Role
-        </SectionHeader>
+        <SectionHeader>Role</SectionHeader>
         <ul>
           {#if roles.length > 0}
             {#each roles as role}

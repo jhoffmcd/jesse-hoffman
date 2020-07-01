@@ -1,4 +1,4 @@
-import { createClient } from "contentful";
+import { createClient } from 'contentful';
 
 const initClient = () => {
   const {
@@ -9,7 +9,7 @@ const initClient = () => {
 
   return createClient({
     space: CONTENTFUL_SPACE,
-    environment: CONTENTFUL_ENVIRONMENT || "development",
+    environment: CONTENTFUL_ENVIRONMENT || 'development',
     accessToken: CONTENTFUL_ACCESS_TOKEN,
   });
 };

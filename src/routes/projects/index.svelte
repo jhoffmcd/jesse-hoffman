@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload() {
     try {
-      const res = await this.fetch("api/cms/projects");
+      const res = await this.fetch('api/cms/projects');
       const { items: projects } = await res.json();
       return { projects };
     } catch (err) {
@@ -11,9 +11,9 @@
 </script>
 
 <script>
-  import Typography from "../../components/Typography.svelte";
-  import Container from "../../components/Container.svelte";
-  import PageHeader from "../../components/PageHeader.svelte";
+  import Typography from '../../components/Typography.svelte';
+  import Container from '../../components/Container.svelte';
+  import PageHeader from '../../components/PageHeader.svelte';
 
   export let projects;
 </script>
@@ -44,9 +44,7 @@
       <ul>
         {#each projects as { fields: { title, slug, thumbnailImage } }}
           <li>
-            <a
-              href="projects/{slug}/"
-              class="thumbnail-link hover:text-purple">
+            <a href="projects/{slug}/" class="thumbnail-link hover:text-purple">
               <div class="relative mb-4" style="--aspect-ratio:400/300">
                 <img
                   class="thumbnail absolute top-0 left-0 z-1 transform scale-95

@@ -1,4 +1,4 @@
-import initClient from "../_contentful/client";
+import initClient from '../_contentful/client';
 
 export async function get(req, res) {
   const {
@@ -9,6 +9,6 @@ export async function get(req, res) {
 
   const asset = await client.getAsset(assetId);
 
-  res.setHeader("Content-Type", "application/json");
+  res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify(asset));
 }

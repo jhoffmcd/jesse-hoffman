@@ -1,4 +1,4 @@
-import initClient from "../_contentful/client";
+import initClient from '../_contentful/client';
 
 export async function get(req, res) {
   const {
@@ -8,10 +8,10 @@ export async function get(req, res) {
   const client = initClient();
 
   const entry = await client.getEntries({
-    "fields.slug": slug,
-    content_type: "page",
+    'fields.slug': slug,
+    content_type: 'page',
   });
 
-  res.setHeader("Content-Type", "application/json");
+  res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify(entry.items[0]));
 }

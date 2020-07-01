@@ -1,12 +1,12 @@
-import initClient from "../_contentful/client";
+import initClient from '../_contentful/client';
 
 export async function get(_req, res) {
   const client = initClient();
 
   const entries = await client.getEntries({
-    content_type: "blogPost",
+    content_type: 'blogPost',
   });
 
-  res.setHeader("Content-Type", "application/json");
+  res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify(entries));
 }

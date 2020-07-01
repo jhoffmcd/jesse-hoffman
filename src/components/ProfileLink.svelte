@@ -29,7 +29,11 @@
   }
 </style>
 
-<a rel="external noreferrer noopener" target="_blank" href={url} class="relative m-2">
+<a
+  rel="external noreferrer noopener"
+  target="_blank"
+  href={url}
+  class="relative m-2">
   <div class="psuedo-border" />
 
   <div class="flex items-center p-6 bg-white">

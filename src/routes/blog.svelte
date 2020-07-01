@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload() {
     try {
-      const res = await this.fetch("api/cms/posts");
+      const res = await this.fetch('api/cms/posts');
       const { items: posts } = await res.json();
       return { posts };
     } catch (err) {
@@ -11,7 +11,7 @@
 </script>
 
 <script>
-  import Container from "../components/Container.svelte";
+  import Container from '../components/Container.svelte';
 
   export let posts;
 </script>

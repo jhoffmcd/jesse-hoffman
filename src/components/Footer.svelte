@@ -1,5 +1,5 @@
 <script>
-  import Container from "../components/Container.svelte";
+  import Container from '../components/Container.svelte';
 
   const currentYear = new Date().getFullYear();
 </script>

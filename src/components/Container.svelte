@@ -1,5 +1,5 @@
 <script>
-  export let size = "large";
+  export let size = 'large';
 </script>
 
 <!--
