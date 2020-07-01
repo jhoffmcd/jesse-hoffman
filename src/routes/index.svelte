@@ -1,11 +1,26 @@
 <script context="module">
   export async function preload() {
     try {
-      const content = await this.fetch('api/cms/pages/about');
+      const requests = [
+        this.fetch('api/cms/pages/about'),
+        this.fetch('api/cms/list/xCou9JoiYzKkYRrFtLIiB'),
+      ]
 
-      const { fields: { pageHeading, body, gallery } } = await content.json();
+      // Parallel contnet requests
+      const content = await Promise.all(
+        requests.map(async (request) => {
+          const response = await request;
+          const parsedResponse = await response.json();
+          return parsedResponse;
+        })
+      );
 
-      return { pageHeading, body, gallery };
+      // Page content
+      const { fields: { pageHeading, body, gallery } } = content[0];
+      // List Content
+      const { fields: { listItems } } = content[1];
+
+      return { pageHeading, body, gallery, listItems };
     } catch (err) {
       console.error(err);
     }
@@ -23,6 +38,7 @@
   export let gallery;
   export let pageHeading;
   export let body;
+  export let listItems;
 
   export const profileAsset = gallery[0].fields.file;
 </script>
@@ -88,9 +104,10 @@
   </PageHeader>
 
   <div class="profiles grid gap-12">
-    <ProfileLink />
-    <ProfileLink />
-    <ProfileLink />
-    <ProfileLink />
+    {#each listItems as { fields: { url, icon: { fields: { file: { url: iconUrl, title: iconTitle } } }, username } }}
+      <ProfileLink {url} {iconUrl} {iconTitle} {username} />
+    {:else}
+      <p>I guess I am nowhere else...</p>
+    {/each}
   </div>
 </Container>
