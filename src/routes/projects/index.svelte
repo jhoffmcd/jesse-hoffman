@@ -13,33 +13,12 @@
 <script>
   import Typography from "../../components/Typography.svelte";
   import Container from "../../components/Container.svelte";
+  import PageHeader from "../../components/PageHeader.svelte";
 
   export let projects;
 </script>
 
 <style>
-  header {
-    position: relative;
-  }
-
-  header::after {
-    content: "—";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-family: "Permanent Marker", cursive;
-    @apply text-magenta text-5xl;
-    line-height: 0;
-  }
-
-  @media md {
-    header::after {
-      @apply text-magenta text-6xl;
-    }
-  }
-
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -57,9 +36,9 @@
 
 <Container>
   <section>
-    <header class="mb-10 md:mb-12 lg:mb-16 text-center">
+    <PageHeader>
       <Typography tag="h1">Projects</Typography>
-    </header>
+    </PageHeader>
 
     {#if projects.length > 0}
       <ul>

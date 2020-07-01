@@ -16,6 +16,11 @@
 
   .editorial-content :global(a) {
     @apply text-magenta;
+    transition: color 100ms linear;
+  }
+
+  .editorial-content :global(a:hover) {
+    @apply text-blue-dark;
   }
 </style>
 

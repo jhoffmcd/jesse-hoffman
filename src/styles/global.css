@@ -17,24 +17,37 @@ h6 {
   font-family: "Permanent Marker", cursive;
 }
 
-h1,
-.h1 {
+h1 {
   @apply text-3xl;
   @apply mb-6;
 }
 
 @screen md {
-  h1,
-  .h1 {
+  h1 {
     @apply text-4xl;
   }
 }
 
 @screen lg {
-  h1,
-  .h1 {
+  h1 {
     @apply text-5xl;
-    @apply mb-6;
+  }
+}
+
+h2 {
+  @apply text-2xl;
+  @apply mb-6;
+}
+
+@screen md {
+  h2 {
+    @apply text-3xl;
+  }
+}
+
+@screen lg {
+  h2 {
+    @apply text-4xl;
   }
 }
 

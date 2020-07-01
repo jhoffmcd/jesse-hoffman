@@ -16,7 +16,9 @@
   import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
   import Container from "../components/Container.svelte";
+  import PageHeader from "../components/PageHeader.svelte";
   import EditorialContent from "../components/EditorialContent.svelte";
+  import ProfileLink from "../components/ProfileLink.svelte";
 
   export let gallery;
   export let pageHeading;
@@ -52,6 +54,10 @@
   .line-3 {
     bottom: calc(21% - 40px);
   }
+
+  .profiles {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 </style>
 
 <svelte:head>
@@ -59,7 +65,7 @@
 </svelte:head>
 
 <Container>
-  <div class="md:grid grid-cols-3 grid-rows-1 gap-20">
+  <div class="md:grid grid-cols-3 grid-rows-1 gap-20 mb-12">
     <div class="col-span-1">
       <div class="relative max-w-xs mx-auto mb-8 md:mb-0" style={`--aspect-ratio:${profileAsset.details.image.width / profileAsset.details.image.height}`}>
         <img class="z-1 transform scale-95" alt="Jesse Hoffman Profile" src={profileAsset.url} />
@@ -75,5 +81,16 @@
       <h1>{pageHeading}</h1>
       <EditorialContent>{@html documentToHtmlString(body)}</EditorialContent>
     </div>
+  </div>
+
+  <PageHeader>
+    <h2>Also Seen At...</h2>
+  </PageHeader>
+
+  <div class="profiles grid gap-12">
+    <ProfileLink />
+    <ProfileLink />
+    <ProfileLink />
+    <ProfileLink />
   </div>
 </Container>
