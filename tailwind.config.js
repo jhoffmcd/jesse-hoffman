@@ -14,6 +14,7 @@ module.exports = {
       magenta: '#da5ad2',
       pink: '#dc94ba',
       gold: '#f2d067',
+      red: '#cf142b',
     },
     zIndex: {
       '0': 0,
