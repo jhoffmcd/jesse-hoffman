@@ -3,8 +3,29 @@
     try {
       const { slug } = page.params;
       const res = await this.fetch(`api/cms/projects/${slug}`);
-      const { fields } = await res.json();
-      return { ...fields };
+      const {
+        fields: {
+          title,
+          description,
+          tech,
+          roles,
+          featuredImage,
+          url,
+          company,
+          client,
+        },
+      } = await res.json();
+
+      return {
+        title,
+        description,
+        tech,
+        roles,
+        featuredImage,
+        url,
+        company,
+        client,
+      };
     } catch (err) {
       console.error(err);
     }
@@ -22,6 +43,8 @@
   export let tech;
   export let roles;
   export let url;
+  export let company;
+  export let client;
 
   export const imageSrc = featuredImage.fields.file.url;
   export const imageTitle = featuredImage.fields.title;
@@ -41,7 +64,7 @@
 </style>
 
 <section>
-  <Container>
+  <Container class="mb-6">
     <header
       class="relative mb-4 md:mb-12 lg:mb-20"
       style="--aspect-ratio:{imageWidth}/{imageHeight}">
@@ -55,49 +78,57 @@
         class="title hidden md:block absolute right-0 z-2 py-6 px-12 bg-gold
         text-right">
         <h1 class="mb-0">{title}</h1>
+        {#if company}
+          <div class="inline-block px-2 bg-gold text-lg">
+            {#if client}Client:{:else}Company:{/if}
+            {company}
+          </div>
+        {/if}
       </div>
     </header>
 
     <div class="md:hidden text-left">
-      <h1>{title}</h1>
+      <h1 class="mb-2">{title}</h1>
+      {#if company}
+        <div class="inline-block px-2 bg-gold">
+          {#if client}Client:{:else}Company:{/if}
+          {company}
+        </div>
+      {/if}
     </div>
   </Container>
 
-  <Container>
+  <Container class="mb-10 md:mb-12 text-center">
     <Button {url} external={true}>Visit Project</Button>
   </Container>
 
   <Container>
     <div class="grid grid-cols-1 md:grid-cols-3 md:gap-12">
-      <aside class="col-span-1 order-2">
+      <aside class="col-span-1 order-2 md:order-1">
         <SectionHeader>Tech</SectionHeader>
-        <ul>
+        <ul class="grid grid-cols-2 gap-6 mb-8">
           {#if tech.length > 0}
             {#each tech as tech}
-              <li>{tech}</li>
+              <li class="flex flex-col items-center text-center">{tech}</li>
             {/each}
           {:else}No tech{/if}
         </ul>
 
         <SectionHeader>Role</SectionHeader>
-        <ul>
+        <ul class="grid grid-cols-2 gap-6 mb-8">
           {#if roles.length > 0}
             {#each roles as role}
-              <li>{role}</li>
+              <li class="flex flex-col items-center text-center">{role}</li>
             {/each}
           {:else}No tech{/if}
         </ul>
 
       </aside>
 
-      <article class="md:col-span-2 mb-12 order-1">
+      <article class="md:col-span-2 mb-12 order-1 md:order-2">
         <h2>Description</h2>
         {description}
       </article>
     </div>
   </Container>
-
-  <!-- <Container size="small">
-    <div>{description}</div>
-  </Container> -->
 </section>

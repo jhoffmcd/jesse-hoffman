@@ -51,6 +51,23 @@ h2 {
   }
 }
 
+h3 {
+  @apply text-lg;
+  @apply mb-6;
+}
+
+@screen md {
+  h3 {
+    @apply text-xl;
+  }
+}
+
+@screen lg {
+  h3 {
+    @apply text-2xl;
+  }
+}
+
 .font-permanent-marker {
   font-family: "Permanent Marker", cursive;
 }

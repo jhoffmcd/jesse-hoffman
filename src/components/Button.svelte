@@ -3,7 +3,7 @@
   export let external = false;
 </script>
 
-<div class="text-right mb-6">
+<div class="mb-6">
   <a
     class="inline-flex items-center px-3 border-2 border-magenta"
     href={url}
