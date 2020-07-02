@@ -22,3 +22,7 @@ As noted in [this GitHub issue](https://github.com/sveltejs/svelte/pull/3928), t
 If you wanted to extend a components base style, the only real way to do it is to append the class string provided by `$$props.class`, see the `Container` component at `/src/components/Container.svelte`.
 
 It seems there is some discussion of this with no clear resolution reached [here](https://github.com/sveltejs/svelte/issues/2870)
+
+### Svelte VS Code Extension and ESlint Problems
+
+I have not been able to get ESLint and the Svelte VS Code extension to work at the same time. I can either have Svelte syntax highlighting or live linting, but not both.
