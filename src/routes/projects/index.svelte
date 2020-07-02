@@ -31,7 +31,7 @@
 </style>
 
 <svelte:head>
-  <title>Jesse Hoffman</title>
+  <title>Jesse Hoffman | Projects</title>
 </svelte:head>
 
 <Container>

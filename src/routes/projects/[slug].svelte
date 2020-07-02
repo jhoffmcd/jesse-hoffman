@@ -63,6 +63,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>Jesse Hoffman | Projects | {title}</title>
+</svelte:head>
+
 <section>
   <Container class="mb-6">
     <header
