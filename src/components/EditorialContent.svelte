@@ -14,6 +14,10 @@
     @apply mb-4;
   }
 
+  .editorial-content :global(b) {
+    @apply font-bold;
+  }
+
   .editorial-content :global(a) {
     @apply text-magenta;
     transition: color 100ms linear;
