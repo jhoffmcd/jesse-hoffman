@@ -8,7 +8,7 @@
 
       // Parallel contnet requests
       const content = await Promise.all(
-        requests.map(async (request) => {
+        requests.map(async request => {
           const response = await request;
           const parsedResponse = await response.json();
           return parsedResponse;
@@ -32,8 +32,6 @@
 </script>
 
 <script>
-  import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-
   import Container from '../components/Container.svelte';
   import PageHeader from '../components/PageHeader.svelte';
   import EditorialContent from '../components/EditorialContent.svelte';
@@ -106,9 +104,7 @@
     </div>
     <div class="col-span-2">
       <h1>{pageHeading}</h1>
-      <EditorialContent>
-        {@html documentToHtmlString(body)}
-      </EditorialContent>
+      <EditorialContent content={body} />
     </div>
   </div>
 

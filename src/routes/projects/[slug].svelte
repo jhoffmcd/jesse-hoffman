@@ -33,8 +33,6 @@
 </script>
 
 <script>
-  import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-
   import Container from '../../components/Container.svelte';
   import SectionHeader from '../../components/SectionHeader.svelte';
   import Button from '../../components/Button.svelte';
@@ -48,10 +46,6 @@
   export let url;
   export let company;
   export let client;
-
-  // const getDocument = async content => await richTextFromMarkdown(content);
-
-  // const parsedDescription = getDocument(description);
 
   export const imageSrc = featuredImage.fields.file.url;
   export const imageTitle = featuredImage.fields.title;
@@ -153,9 +147,7 @@
 
       <article class="md:col-span-2 mb-12 order-1 md:order-2">
         <h2>Description</h2>
-        <EditorialContent>
-          {@html documentToHtmlString(description)}
-        </EditorialContent>
+        <EditorialContent content={description} />
       </article>
     </div>
   </Container>

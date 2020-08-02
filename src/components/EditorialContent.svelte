@@ -1,3 +1,31 @@
+<script>
+  import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+  import { INLINES } from '@contentful/rich-text-types';
+
+  const options = {
+    renderNode: {
+      [INLINES.HYPERLINK]: (node, next) => {
+        // If URI path includes a protocol, it's meant to be an external link
+        const isAbsoluteURL = RegExp(/^https?:\/\/|^\/\//i).test(node.data.uri);
+
+        if (isAbsoluteURL) {
+          return `<a href=${
+            node.data.uri
+          } rel="external noopener noreferrer" target="_blank">${next(
+            node.content
+          )}</a>`;
+        } else {
+          return `<a href=${node.data.uri} rel="prefetch">${next(
+            node.content
+          )}</a>`;
+        }
+      },
+    },
+  };
+
+  export let content;
+</script>
+
 <style>
   .editorial-content {
     line-height: 2;
@@ -29,5 +57,5 @@
 </style>
 
 <div class="editorial-content">
-  <slot />
+  {@html documentToHtmlString(content, options)}
 </div>
