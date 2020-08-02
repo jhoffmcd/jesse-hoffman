@@ -10,7 +10,6 @@ dotenv.config();
 
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
-console.log(process.env);
 
 export default polka()
   .use(
