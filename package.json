@@ -35,7 +35,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.32",
     "postcss-import": "^12.0.1",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
     "prettier-plugin-svelte": "^1.1.0",
     "rollup": "^2.26.6",
     "rollup-plugin-postcss": "3.1.6",
