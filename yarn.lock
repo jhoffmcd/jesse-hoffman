@@ -2702,14 +2702,15 @@ safe-identifier@^0.4.1:
   resolved "https://registry.yarnpkg.com/safe-identifier/-/safe-identifier-0.4.1.tgz#b6516bf72594f03142b5f914f4c01842ccb1b678"
   integrity sha512-73tOz5TXsq3apuCc3vC8c9QRhhdNZGiBhHmPPjqpH4TO5oCDqk8UIsDcSs/RG6dYcFAkOOva0pqHS3u7hh7XXA==
 
-sapper@^0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.0.tgz#1dfed31f68a5d684fc4bdf8c6a54b6dc79edf5b0"
-  integrity sha512-t5Qwaad4Zq0HFHqGVV5iw3M22B3cvczxyBzUJiQyMWuL2KY1wDi+6DslEEkpdfrOPejdphj2z4oVpE4X8iOc5w==
+sapper@^0.28.2:
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.2.tgz#84a3a1a4d18c4851efde7f10f64d82bec3d15314"
+  integrity sha512-0k967n9EnGxj9t1ezuvEUFiqUI7Mr92grAJXlhRNmEfV7qvJhiTqNmN/N7GvUtz3qk4RF9u2hfQCa48ozx85GA==
   dependencies:
     html-minifier "^4.0.0"
     http-link-header "^1.0.2"
     shimport "^1.0.1"
+    source-map "^0.6.1"
     sourcemap-codec "^1.4.6"
     string-hash "^1.1.3"
 
