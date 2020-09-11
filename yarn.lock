@@ -1285,6 +1285,11 @@ html-minifier@^4.0.0:
     relateurl "^0.2.7"
     uglify-js "^3.5.1"
 
+html-tags@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-3.1.0.tgz#7b5e6f7e665e9fb41f30007ed9e0d41e97fb2140"
+  integrity sha512-1qYz89hW3lFDEazhjW0yVAV87lw8lVkrJocr72XmBkMKsoSVJCQx3W8BXsC7hO2qAt8BoVjYjtAcZ9perqGnNg==
+
 http-link-header@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/http-link-header/-/http-link-header-1.0.2.tgz#bea50f02e1c7996021f1013b428c63f77e0f4e11"
@@ -3055,10 +3060,10 @@ tailwindcss-plugins@^0.3.0:
   dependencies:
     lodash "^4.17.11"
 
-tailwindcss@^1.7.5:
-  version "1.7.5"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.7.5.tgz#4a54ffcc5691822cbc20416242e92505728f79b7"
-  integrity sha512-thDHLkRioJh0/62EFcEfQCCBEsZXpluehymrPzn8Hkycy8uI9svvtOqyWtcfkBPB0s5yb6R2tY9zPzh5mIr0Wg==
+tailwindcss@^1.8.7:
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.8.7.tgz#0c0ee990d3cfeb8f6705d894c4c85aaa70fba032"
+  integrity sha512-KN5PjI8jobOj+ScJFgG0tbHZBYrb6rwNlm0kEPGusg+ItEVIUDlW/uppP10jKTLiPKrHHx0tfnZTMIyJkujrEQ==
   dependencies:
     "@fullhuman/postcss-purgecss" "^2.1.2"
     autoprefixer "^9.4.5"
@@ -3068,6 +3073,7 @@ tailwindcss@^1.7.5:
     color "^3.1.2"
     detective "^5.2.0"
     fs-extra "^8.0.0"
+    html-tags "^3.1.0"
     lodash "^4.17.20"
     node-emoji "^1.8.1"
     normalize.css "^8.0.1"
