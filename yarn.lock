@@ -3086,10 +3086,10 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-preprocess@^4.4.3:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.4.3.tgz#3ed7a43832f3dd2ce8b979575e2b159e21ef6f20"
-  integrity sha512-KFBzUT3+HFbu9NNX0pgMoJ4/dlPU0EpxLFS+Aao9xkWJ/YflxzutcCe7XTaQdX72YXlVR3RWictil8AEe3J9Xw==
+svelte-preprocess@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.6.0.tgz#9ec11e7c00a44f7d0c5932a35b34125d6dbcd458"
+  integrity sha512-kJwcU71+yw3KKMgGu9eHZMJVBSkW4VfGJ5LSMgFQP/XcwvY2QUV6JcyBoQTjJm+h1KRlo/WGDo6A7+7e+B8B4A==
   dependencies:
     "@types/pug" "^2.0.4"
     "@types/sass" "^1.16.0"
