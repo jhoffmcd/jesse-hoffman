@@ -3069,10 +3069,10 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-preprocess@^4.4.3:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.4.3.tgz#3ed7a43832f3dd2ce8b979575e2b159e21ef6f20"
-  integrity sha512-KFBzUT3+HFbu9NNX0pgMoJ4/dlPU0EpxLFS+Aao9xkWJ/YflxzutcCe7XTaQdX72YXlVR3RWictil8AEe3J9Xw==
+svelte-preprocess@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.6.1.tgz#a7de4d91b32d5608b6637da960ee81e6089ae276"
+  integrity sha512-s7KdhR2pOsffyOzZIMEb315f6pfgeDnOWN47m6YKFeSEx3NMf/79Znc3vuG/Ai79SL/vsi86WDrjFPLGRfDesg==
   dependencies:
     "@types/pug" "^2.0.4"
     "@types/sass" "^1.16.0"
