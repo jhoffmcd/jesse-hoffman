@@ -23,12 +23,12 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@contentful/rich-text-from-markdown@^14.1.1":
-  version "14.1.1"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-from-markdown/-/rich-text-from-markdown-14.1.1.tgz#91912d4b1f66010e0be438c0b7d326ec173c7848"
-  integrity sha512-PjmbMXJIRj4fJ2l4R+LfJXTYoJNTMSriguMwVAB33Ake7DPzp6dlmwTi+aCYkb+VMKLrRBBxjSWjEFTkt8r9Tw==
+"@contentful/rich-text-from-markdown@^14.1.2":
+  version "14.1.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-from-markdown/-/rich-text-from-markdown-14.1.2.tgz#76031afdb221165b241024becb0e5fdc397f0dd1"
+  integrity sha512-PrJMJCVcOySzQQgxhN2ycdgtbJLBfI+n2j9/WzKsGZHB7zsfDeSBPxeSFngR2UgtynEJP4A4i9gWAfvATXpSFg==
   dependencies:
-    "@contentful/rich-text-types" "^14.1.1"
+    "@contentful/rich-text-types" "^14.1.2"
     lodash "^4.17.11"
     remark-parse "^6.0.3"
     unified "^7.1.0"
@@ -41,7 +41,7 @@
     "@contentful/rich-text-types" "^14.1.2"
     escape-html "^1.0.3"
 
-"@contentful/rich-text-types@^14.1.1", "@contentful/rich-text-types@^14.1.2":
+"@contentful/rich-text-types@^14.1.2":
   version "14.1.2"
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-14.1.2.tgz#33162fdbf427891122a96030f806ca9a9cf0e844"
   integrity sha512-XbgZ7op5uyYYszipgQg/bYobF4b+llXyTwS8hISRniQY9xKESz544eP2OGmRc4J3MHx29M7Vmx7TVA/IK65giQ==
