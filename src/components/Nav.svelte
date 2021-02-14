@@ -64,7 +64,7 @@
     </li>
     <li>
       <a
-        rel="prefetch"
+        sapper:prefetch
         aria-current={segment === 'projects' ? 'page' : undefined}
         href="projects/"
         on:click={(evt) => handleClick('projects/', evt)}>
@@ -73,7 +73,7 @@
     </li>
     <li>
       <a
-        rel="prefetch"
+        sapper:prefetch
         aria-current={segment === 'blog' ? 'page' : undefined}
         href="blog/"
         on:click={(evt) => handleClick('blog/', evt)}>

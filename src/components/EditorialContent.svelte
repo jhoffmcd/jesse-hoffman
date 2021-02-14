@@ -15,7 +15,7 @@
             node.content
           )}</a>`;
         } else {
-          return `<a href=${node.data.uri} rel="prefetch">${next(
+          return `<a href=${node.data.uri} sapper:prefetch>${next(
             node.content
           )}</a>`;
         }
