@@ -37,12 +37,12 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@contentful/rich-text-from-markdown@^14.1.2":
-  version "14.1.2"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-from-markdown/-/rich-text-from-markdown-14.1.2.tgz#76031afdb221165b241024becb0e5fdc397f0dd1"
-  integrity sha512-PrJMJCVcOySzQQgxhN2ycdgtbJLBfI+n2j9/WzKsGZHB7zsfDeSBPxeSFngR2UgtynEJP4A4i9gWAfvATXpSFg==
+"@contentful/rich-text-from-markdown@^15.12.0":
+  version "15.12.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-from-markdown/-/rich-text-from-markdown-15.12.0.tgz#c8d8effd7bdef462196d6eff64364b6c0288e37a"
+  integrity sha512-6jgnQ+OH0xr6GR6p5jBZhvMBuyvUB6NTLCaDh3nEwIGMWDnF0DsCrEJF1G1eDbadUayKWF7hpuCu+DBP1WjiwA==
   dependencies:
-    "@contentful/rich-text-types" "^14.1.2"
+    "@contentful/rich-text-types" "^15.12.0"
     lodash "^4.17.11"
     remark-parse "^6.0.3"
     unified "^7.1.0"
@@ -59,6 +59,11 @@
   version "14.1.2"
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-14.1.2.tgz#33162fdbf427891122a96030f806ca9a9cf0e844"
   integrity sha512-XbgZ7op5uyYYszipgQg/bYobF4b+llXyTwS8hISRniQY9xKESz544eP2OGmRc4J3MHx29M7Vmx7TVA/IK65giQ==
+
+"@contentful/rich-text-types@^15.12.0":
+  version "15.12.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-15.12.0.tgz#25d51e4c6d353286662c53e038052c999d5c01d0"
+  integrity sha512-PgpNu9X+TteL2P9jNi3nUMvQk/y6fyeFdN18/P1hL8HX5iezFZGskaYNu5rlog4O9yc93XrWfWYfXbuBTE91Kg==
 
 "@eslint/eslintrc@^0.3.0":
   version "0.3.0"
