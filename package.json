@@ -19,7 +19,7 @@
     "@contentful/rich-text-from-markdown": "^15.13.1",
     "@contentful/rich-text-html-renderer": "^14.1.2",
     "compression": "^1.7.1",
-    "contentful": "^8.4.2",
+    "contentful": "^9.1.33",
     "polka": "next",
     "sirv": "^1.0.10"
   },
