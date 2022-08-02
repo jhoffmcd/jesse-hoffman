@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-from-markdown": "^15.13.1",
-    "@contentful/rich-text-html-renderer": "^14.1.2",
+    "@contentful/rich-text-html-renderer": "^15.13.1",
     "compression": "^1.7.1",
     "contentful": "^9.1.33",
     "polka": "next",
