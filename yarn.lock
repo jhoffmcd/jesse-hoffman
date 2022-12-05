@@ -40,18 +40,23 @@
     remark-parse "^6.0.3"
     unified "^7.1.0"
 
-"@contentful/rich-text-html-renderer@^15.13.1":
-  version "15.13.1"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-15.13.1.tgz#f51d55765066f751157c74f71f826f34f84d5745"
-  integrity sha512-FcQSMvWy8RQ4CggbpaXQ4Hrfx/APemJufcmzIF0kDmBBq5VACVo5jX2E35s+/GShz++JlTBFCAKoyMhbNKZuSw==
+"@contentful/rich-text-html-renderer@^16.0.2":
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-16.0.2.tgz#18bd2a2a9ee2f68192384b4f9af97f58270bd336"
+  integrity sha512-0flmxVixlNk5PMiHXAlABUJ2uURsWxOjbC6ZHhqpEVHU03kHMoIKfDdo6CRZc0S0rMWMO3c14Ei91E97T06T8w==
   dependencies:
-    "@contentful/rich-text-types" "^15.12.1"
+    "@contentful/rich-text-types" "^16.0.2"
     escape-html "^1.0.3"
 
 "@contentful/rich-text-types@^15.12.1":
   version "15.12.1"
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-15.12.1.tgz#3b131f03fc55b6001f6eb5f5615aefb22678b3d3"
   integrity sha512-WQJic0fnAbTa8xzO3Z+aVqDmA5+JMNQlATQMVJ40GoOrnM8YoJZsKGf6xX/O6Y6Eq10T1LrpxIOslODFI9qFgg==
+
+"@contentful/rich-text-types@^16.0.2":
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.0.2.tgz#779bc76b5159152b3a9e908e6a04cb9342faa9b1"
+  integrity sha512-ovbmCKQjlyGek4NuABoqDesC3FBV3e5jPMMdtT2mpOy9ia31MKO0NSFMRGZu7Q+veZzmDMja8S1i/XeFCUT9Pw==
 
 "@eslint/eslintrc@^1.3.3":
   version "1.3.3"
